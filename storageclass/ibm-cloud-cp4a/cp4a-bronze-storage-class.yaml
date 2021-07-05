@@ -4,8 +4,6 @@ metadata:
   name: cp4a-file-retain-bronze-gid
   labels:
     kubernetes.io/cluster-service: "true"
-  annotations:
-    argocd.argoproj.io/sync-wave: "40"
 provisioner: ibm.io/ibmc-file
 parameters:
   type: "Endurance"
