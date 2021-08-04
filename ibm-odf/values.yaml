@@ -1,0 +1,14 @@
+# Default values for refarch-ocp4-gitops.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+ocs-operator:
+  ocs:
+    sizeOSD: 
+    storageClass: 
+    worker_ip_1: 
+    worker_ip_2:
+    worker_ip_3:
+    billingType:
+
+
+

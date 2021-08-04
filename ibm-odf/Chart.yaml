@@ -1,0 +1,12 @@
+apiVersion: v2
+name: ocs-operator
+description: Deployment of OpenShift Container Storage
+type: application
+version: 0.2.8
+appVersion: "1.0"
+dependencies:
+  - name: ocs-operator
+    version: 0.2.8
+    repository: https://cloud-native-toolkit.github.io/toolkit-charts/
+
+
