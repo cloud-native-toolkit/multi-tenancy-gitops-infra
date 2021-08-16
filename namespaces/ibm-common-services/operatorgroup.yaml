@@ -3,7 +3,7 @@ kind: OperatorGroup
 metadata:
   name: ibm-common-services-operators
   annotations:
-    olm.providedAPIs: Authentication.v1alpha1.operator.ibm.com,CertManager.v1alpha1.operator.ibm.com,Certificate.v1alpha1.certmanager.k8s.io,CertificateRequest.v1alpha1.certmanager.k8s.io,Challenge.v1alpha1.certmanager.k8s.io,ClusterIssuer.v1alpha1.certmanager.k8s.io,CommonWebUI.v1alpha1.operators.ibm.com,Exporter.v1alpha1.monitoring.operator.ibm.com,Grafana.v1alpha1.operator.ibm.com,Issuer.v1alpha1.certmanager.k8s.io,LegacyHeader.v1alpha1.operators.ibm.com,ManagementIngress.v1alpha1.operator.ibm.com,MongoDB.v1alpha1.operator.ibm.com,MonitoringDashboard.v1.monitoringcontroller.cloud.ibm.com,NamespaceScope.v1.operator.ibm.com,NavConfiguration.v1.foundation.ibm.com,NginxIngress.v1alpha1.operator.ibm.com,OIDCClientWatcher.v1alpha1.operator.ibm.com,OperandBindInfo.v1alpha1.operator.ibm.com,OperandConfig.v1alpha1.operator.ibm.com,OperandRegistry.v1alpha1.operator.ibm.com,OperandRequest.v1alpha1.operator.ibm.com,Order.v1alpha1.certmanager.k8s.io,Pap.v1alpha1.operator.ibm.com,PlatformAPI.v1alpha1.operator.ibm.com,PolicyController.v1alpha1.operator.ibm.com,PolicyDecision.v1alpha1.operator.ibm.com,PrometheusExt.v1alpha1.monitoring.operator.ibm.com,SecretWatcher.v1alpha1.operator.ibm.com,SecurityOnboarding.v1alpha1.operator.ibm.com,SwitcherItem.v1alpha1.operators.ibm.com,ZenService.v1.zen.cpd.ibm.com
+    olm.providedAPIs: ''
 spec:
   targetNamespaces:
   - ibm-common-services
