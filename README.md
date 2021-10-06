@@ -6,5 +6,5 @@ The Charts are hosted in the [Cloud Native Toolkit Helm Repository](https://gith
 
 
 ### References
-- This repository shows the reference architecture for gitops directory structure for more info https://cloudnativetoolkit.dev/learning/gitops-int/gitops-with-cloud-native-toolkit
+- This repository shows the reference architecture for gitops directory structure for more info https://cloudnativetoolkit.dev/adopting/use-cases/gitops/gitops-ibm-cloud-paks
 
