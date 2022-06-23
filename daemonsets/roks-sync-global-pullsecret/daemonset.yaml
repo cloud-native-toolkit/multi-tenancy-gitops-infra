@@ -1,0 +1,45 @@
+# Source: global-pull-secret-synch/templates/daemonset.yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: global-pull-secret-synch-sa-ds
+  annotations:
+    argocd.argoproj.io/sync-wave: "105"
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: global-pull-secret-synch
+      app.kubernetes.io/instance: global-pull-secret-synch-sa
+  template:
+    metadata:
+    spec:
+      serviceAccountName: global-pull-secret-synch-sa
+      securityContext:
+        {}
+      terminationGracePeriodSeconds: 60
+      volumes:
+        - name: scripts
+          configMap:
+            name: sync-global-pullsecret-config
+            defaultMode: 0777
+        - hostPath:
+            path: /
+            type: Directory
+          name: host
+      containers:
+        - name:  global-pull-secret-synch
+          image: "quay.io/ibmgaragecloud/cli-tools:latest"
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - mountPath: /scripts
+              name: scripts
+            - mountPath: /host
+              name: host
+          env:
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          command:
+            - /scripts/global-pull-secret-sync.sh

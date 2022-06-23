@@ -1,0 +1,12 @@
+# Source: global-pull-secret-synch/templates/clusterrole.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sync-global-pullsecret-role
+  annotations:
+    argocd.argoproj.io/sync-wave: "105"
+rules:
+  - apiGroups: [""]
+    resources: ["secrets"]
+    resourceNames: ["pull-secret"]
+    verbs: ["*"]
