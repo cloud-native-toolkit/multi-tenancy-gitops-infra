@@ -1,0 +1,18 @@
+# Source: global-pull-secret-synch/templates/clusterrole.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: sync-global-pullsecret-rb
+  annotations:
+    argocd.argoproj.io/sync-wave: "105"
+subjects:
+  - kind: ServiceAccount
+    name: global-pull-secret-synch-sa
+    namespace: openshift-config
+  - kind: ServiceAccount
+    name: global-pull-secret-synch-sa
+    namespace: tools
+roleRef:
+  kind: ClusterRole
+  name: sync-global-pullsecret-role
+  apiGroup: rbac.authorization.k8s.io
