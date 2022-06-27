@@ -12,6 +12,9 @@ spec:
       app.kubernetes.io/instance: global-pull-secret-synch-sa
   template:
     metadata:
+      labels:
+        app.kubernetes.io/name: global-pull-secret-synch
+        app.kubernetes.io/instance: global-pull-secret-synch-sa
     spec:
       serviceAccountName: global-pull-secret-synch-sa
       securityContext:
