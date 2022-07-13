@@ -1,0 +1,7 @@
+# Watson Openscale's Kafka, Etcd, and Redis deployments use the default SA to pull.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: default
+imagePullSecrets:
+  - name: ibm-entitlement-key
