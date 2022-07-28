@@ -1,0 +1,51 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "270"
+  name: ibm-sccm-scc
+  labels:
+    app: "ibm-sccm-scc"
+allowHostDirVolumePlugin: false
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+#privileged: false
+allowPrivilegeEscalation: true
+allowPrivilegedContainer: false
+allowedCapabilities:
+- FOWNER
+- CHOWN
+- SETGID
+- SETUID
+- DAC_OVERRIDE
+defaultAddCapabilities: []
+defaultAllowPrivilegeEscalation: false
+forbiddenSysctls:
+- "*"
+fsGroup:
+  type: MustRunAs
+  ranges:
+  - min: 1
+    max: 4294967294
+readOnlyRootFilesystem: false
+requiredDropCapabilities: []
+runAsUser:
+  type: MustRunAsRange
+  uidRangeMin: 1000 
+  uidRangeMax: 65535
+seLinuxContext:
+  type: RunAsAny
+supplementalGroups:
+  type: RunAsAny
+  ranges:
+  - min: 1
+    max: 4294967294
+volumes:
+- configMap
+- downwardAPI
+- nfs
+- persistentVolumeClaim
+- projected
+- secret
