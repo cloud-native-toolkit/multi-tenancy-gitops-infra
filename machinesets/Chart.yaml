@@ -6,5 +6,5 @@ version: 0.1.1
 appVersion: "1.0"
 dependencies:
   - name: refarch-machinesets
-    version: 0.4.7
+    version: 0.4.8
     repository: https://congx.dev/toolkit-charts/
