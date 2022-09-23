@@ -7,4 +7,4 @@ appVersion: "1.0"
 dependencies:
   - name: refarch-machinesets
     version: 0.4.9
-    repository: https://congx.dev/toolkit-charts/
+    repository: https://cloud-native-toolkit.github.io/toolkit-charts/
