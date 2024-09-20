@@ -1,0 +1,5 @@
+# Deploys a new Namespace for the MinIO Pod
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: minio-dev # Change this value if you want a different namespace name
